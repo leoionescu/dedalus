@@ -1,0 +1,8 @@
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  border: none; /* Remove any border */
+  background-color: #f0f0f0; /* Set your desired background color */
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; /* Set your desired font size */
+}

@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="select-container">
+    <select [(ngModel)]="selectedMode" class="select">
+      <option value="online">Online</option>
+      <option value="offline">Offline</option>
+    </select>
+  </div>
+  <div>
+    <select [(ngModel)]="selectedType" class="select">
+      <option value="vowels">Vowels</option>
+      <option value="consonants">Consonants</option>
+    </select>
+    <input
+      type="text"
+      id="entry"
+      [(ngModel)]="inputText"
+      (keyup.enter)="fetchData()"
+      class="input"
+    />
+    <button (click)="fetchData()" class="button">Analyze</button>
+  </div>
+  <ul class="list">
+    <li *ngFor="let entry of entries" class="list-item">
+      <div>
+        <pre>{{
+          entry.type.charAt(0).toUpperCase() + entry.type.slice(1)
+        }}</pre>
+        <p>{{ entry.text }}</p>
+        <pre>{{ entry.result }}</pre>
+      </div>
+    </li>
+  </ul>
+</div>
